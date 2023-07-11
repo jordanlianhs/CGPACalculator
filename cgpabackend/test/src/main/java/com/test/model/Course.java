@@ -1,6 +1,5 @@
 package com.test.model;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -8,6 +7,7 @@ import jakarta.persistence.Id;
 public class Course {
     @Id
     private String coursecode;
+    
     private String name;
     private int credits;
     private String grade;
@@ -35,14 +35,12 @@ public class Course {
     public void setCredits(int credits) {
         this.credits = credits;
     }
-
     public String getGrade() {
         return grade;
     }
     public void setGrade(String grade) {
         this.grade = grade;
     }
-
     public int getYear() {
         return year;
     }
