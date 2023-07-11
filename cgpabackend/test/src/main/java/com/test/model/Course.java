@@ -9,7 +9,7 @@ public class Course {
     private String coursecode;
     
     private String name;
-    private int credits;
+    private int credit;
     private String grade;
     private int year;
     private int sem;
@@ -29,11 +29,11 @@ public class Course {
     public void setCoursecode(String coursecode) {
         this.coursecode = coursecode;
     }
-    public int getCredits() {
-        return credits;
+    public int getCredit() {
+        return credit;
     }
-    public void setCredits(int credits) {
-        this.credits = credits;
+    public void setCredit(int credits) {
+        this.credit = credits;
     }
     public String getGrade() {
         return grade;

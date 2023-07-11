@@ -16,7 +16,6 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exac path='/addcourse' element={<AddCourse />} />
-
         </Routes>
       </Router>
     </div>
