@@ -1,14 +1,40 @@
-import React from "react";
-import { useState } from "react";
+import React ,  { useState } from "react";
+import axios from "axios";
+import {Link, useNavigate } from "react-router-dom";
 
 export default function AddCourse() {
-  const [course, setCourse] = useState({});
+
+  let navigate = useNavigate();
+
+  const [course, setCourse] = useState({
+    coursecode: "",
+    name: "",
+    credit: "",
+    grade: "",
+    year: "",
+    sem: ""
+  });
+
+  const {coursecode, name, credit, grade, year, sem} = course;
+
+  const onInputChange = (e) =>{
+    setCourse({...course,[e.target.name]: e.target.value})
+  }
+
+  const onSubmit = async (e) =>{
+    e.preventDefault();
+    console.log(course);
+    await axios.post("http://localhost:8080/addCourse", course);
+    navigate("/");
+  }
+
   return (
     <div className="container">
-      <div className="row">
-        <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-          <h2 className="text-center m-4">Add Course</h2>
-
+      <div className="row justify-content-center mt-2">
+        <div className="col-md-6 offset-mdå-3 border rounded p-4 mt-2 shadow">
+          <h2 className="text-center mb-3">Add Course</h2>
+          
+          <form onSubmit={(e)=>onSubmit(e)}>
           <div className="mb-3">
             <label htmlFor="Course Code" className="form-label">
               Course Code
@@ -17,7 +43,10 @@ export default function AddCourse() {
               type={"text"}
               className="form-control"
               placeholder="Enter Course Code"
-            ></input>
+              name="coursecode"
+              value={coursecode}
+              onChange={(e) => onInputChange(e)}
+            />
           </div>
 
           <div className="mb-3">
@@ -28,11 +57,14 @@ export default function AddCourse() {
               type={"text"}
               className="form-control"
               placeholder="Enter Course Name"
-            ></input>
+              name="name"
+              value={name}
+              onChange={(e) => onInputChange(e)}
+            />
           </div>
 
           <div className="mb-3">
-            <label htmlFor="Course Credits" className="form-label">
+            <label htmlFor="Course Credit" className="form-label">
               Course Credits
             </label>
             <input
@@ -40,8 +72,11 @@ export default function AddCourse() {
               min={1}
               max={10}
               className="form-control"
-              placeholder="Enter Course Credits"
-            ></input>
+              placeholder="Enter Course Credit"
+              name="credit"
+              value={credit}
+              onChange={(e) => onInputChange(e)}
+            />
           </div>
 
           <div className="mb-3">
@@ -52,7 +87,10 @@ export default function AddCourse() {
               type={"text"}
               className="form-control"
               placeholder="Enter Course Grade"
-            ></input>
+              name="grade"
+              value={grade}
+              onChange={(e) => onInputChange(e)}
+            />
           </div>
 
           <div className="mb-3">
@@ -65,7 +103,10 @@ export default function AddCourse() {
               max={8}
               className="form-control"
               placeholder="Enter Year"
-            ></input>
+              name="year"
+              value={year}
+              onChange={(e) => onInputChange(e)}
+            />
           </div>
 
           <div className="mb-3">
@@ -78,17 +119,21 @@ export default function AddCourse() {
               max={2}
               className="form-control"
               placeholder="Enter Semester"
-            ></input>
+              name="sem"
+              value={sem}
+              onChange={(e) => onInputChange(e)}
+            />
           </div>
 
           <div className="mb-3 d-flex justify-content-evenly">
             <button className="btn btn-outline-dark" type="submit">
               Submit
             </button>
-            <button className="btn btn-danger btn-outline-dark" type="cancel">
+            <Link className="btn btn-danger btn-outline-dark" to="/">
               Cancel
-            </button>
+            </Link>
           </div>
+          </form>
         </div>
       </div>
     </div>
