@@ -6,9 +6,9 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to={"/"}>
             CGPA Calculator
-          </a>
+          </Link>
 
           <button
             className="navbar-toggler"

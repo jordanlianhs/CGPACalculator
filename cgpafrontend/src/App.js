@@ -4,17 +4,19 @@ import Navbar from './layout/Navbar';
 import Home from './pages/Home';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import AddCourse from './courses/AddCourse';
-
+import EditCourse from './courses/EditCourse';
+import ViewCourse from './courses/ViewCourse';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar />
-
         <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route exac path='/addcourse' element={<AddCourse />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/addcourse' element={<AddCourse />} />
+          <Route path ='/viewcourse/:courseid' element={<ViewCourse />} />
+          <Route path='/editcourse/:courseid' element={<EditCourse />} />
         </Routes>
       </Router>
     </div>

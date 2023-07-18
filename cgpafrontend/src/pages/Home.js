@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link, useParams } from "react-router-dom";
 
 export default function Home() {
   const [users, setUsers] = useState([]);
+
+  const {courseid} = useParams();
 
   useEffect(() => {
     loadUsers();
@@ -11,8 +14,13 @@ export default function Home() {
   const loadUsers = async () => {
     const result = await axios.get("http://localhost:8080/getCourses");
     setUsers(result.data)
-    console.log(result.data);
 };
+
+  const deleteUser = async (courseid) => {
+      await axios.delete(`http://localhost:8080/deleteCourse/${courseid}`);
+      loadUsers();
+  }
+
 
   return (
     <div className="container">
@@ -35,18 +43,26 @@ export default function Home() {
               <tr className="table-success">
                 <th scope="row">{user.coursecode}</th>
                 <td>{user.name}</td>
-                <td>{user.credits}</td>
+                <td>{user.credit}</td>
                 <td>{user.grade}</td>
                 <td>{user.year}</td>
                 <td>{user.sem}</td>
                 <td className="d-flex justify-content-between">
-                    <button className="btn btn-dark mx-auto"> 
+                    <Link 
+                    className="btn btn-dark mx-auto"
+                    to={`/viewcourse/${user.coursecode}`}
+                    > 
                       View
-                    </button>
-                    <button className="btn btn-outline-dark mx-auto"> 
+                    </Link>
+                    <Link 
+                    className="btn btn-outline-dark mx-auto" 
+                    to={`/editcourse/${user.coursecode}`}> 
                       Edit
-                    </button>
-                    <button className="btn btn-danger btn-outline-dark mx-auto"> 
+                    </Link>
+                    <button 
+                    className="btn btn-danger btn-outline-dark mx-auto"
+                    onClick={() => deleteUser(user.coursecode)}
+                    > 
                       Delete
                     </button>
                 </td>

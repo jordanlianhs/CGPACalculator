@@ -4,9 +4,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -40,6 +42,29 @@ public class CourseController{
     Course getCourse(@PathVariable String coursecode){
         return courseRepository.findById(coursecode)
         .orElseThrow(()->new CourseNotFoundException(coursecode));
+    }
+
+    @PutMapping("/updateCourse/{coursecode}")
+    Course updateCourse(@RequestBody Course newCourse, @PathVariable String coursecode){
+        return courseRepository.findById(coursecode)
+        .map(course->{
+            course.setCoursecode(newCourse.getCoursecode());
+            course.setName(newCourse.getName());
+            course.setCredit(newCourse.getCredit());
+            course.setGrade(newCourse.getGrade());
+            course.setYear(newCourse.getYear());
+            course.setSem(newCourse.getSem());
+            return courseRepository.save(course);
+        }).orElseThrow(()->new CourseNotFoundException(coursecode));
+    }
+
+    @DeleteMapping("/deleteCourse/{coursecode}")
+    String deleteCourse(@PathVariable String coursecode){
+        if(!courseRepository.existsById(coursecode)){
+            throw new CourseNotFoundException(coursecode);
+        }
+        courseRepository.deleteById(coursecode);
+        return "User with id " + coursecode + " has been deleted successfully";
     }
 }
 
