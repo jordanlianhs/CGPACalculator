@@ -31,8 +31,8 @@ export default function Home() {
             </tr>
           </thead>
           <tbody className="table-group-divider">
-            {courses.map((user,index) => (
-              <tr className="table-success">
+            {courses.map((user) => (
+              <tr className="table-success" key={user.coursecode}>
                 <th scope="row">{user.coursecode}</th>
                 <td>{user.name}</td>
                 <td>{user.credit}</td>
