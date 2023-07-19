@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import AddCourse from './courses/AddCourse';
 import EditCourse from './courses/EditCourse';
 import ViewCourse from './courses/ViewCourse';
+import DeleteCourse from './courses/DeleteCourse';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/addcourse' element={<AddCourse />} />
           <Route path ='/viewcourse/:courseid' element={<ViewCourse />} />
           <Route path='/editcourse/:courseid' element={<EditCourse />} />
+          <Route path='/deletecourse/:courseid' element={<DeleteCourse />} />
         </Routes>
       </Router>
     </div>

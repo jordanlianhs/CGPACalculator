@@ -25,7 +25,6 @@ export default function EditCourse() {
 
   useEffect(() => {
     const loadCourse = async()=>{
-        console.log(courseid);
         if(courseid){
             const result = await axios.get(`http://localhost:8080/getCourse/${courseid}`);
             setCourse(result.data);
@@ -55,6 +54,14 @@ export default function EditCourse() {
           <div className="mb-3">
             <label htmlFor="Course Code" className="form-label">
               Course Code
+              <span
+                  className="text-danger"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Course code cannot be edited. Please delete the course instead."
+                >
+                  &nbsp;Hover here for more info.
+                </span>
             </label>
             <input
               type={"text"}
@@ -63,6 +70,7 @@ export default function EditCourse() {
               name="coursecode"
               value={coursecode}
               onChange={(e) => onInputChange(e)}
+              disabled = {true}
             />
           </div>
 
@@ -143,10 +151,10 @@ export default function EditCourse() {
           </div>
 
           <div className="mb-3 d-flex justify-content-evenly">
-            <button className="btn btn-outline-dark" type="submit">
+            <button className="btn btn-danger btn-outline-dark" type="submit">
               Submit
             </button>
-            <Link className="btn btn-danger btn-outline-dark" to="/">
+            <Link className="btn btn-outline-dark" to="/">
               Cancel
             </Link>
           </div>

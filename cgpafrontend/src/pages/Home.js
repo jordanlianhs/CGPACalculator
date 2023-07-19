@@ -1,26 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Home() {
-  const [users, setUsers] = useState([]);
-
-  const {courseid} = useParams();
+  const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    loadUsers();
+    loadCourses();
   }, []);
 
-  const loadUsers = async () => {
+  const loadCourses = async () => {
     const result = await axios.get("http://localhost:8080/getCourses");
-    setUsers(result.data)
+    setCourses(result.data)
 };
-
-  const deleteUser = async (courseid) => {
-      await axios.delete(`http://localhost:8080/deleteCourse/${courseid}`);
-      loadUsers();
-  }
-
 
   return (
     <div className="container">
@@ -39,7 +31,7 @@ export default function Home() {
             </tr>
           </thead>
           <tbody className="table-group-divider">
-            {users.map((user,index) => (
+            {courses.map((user,index) => (
               <tr className="table-success">
                 <th scope="row">{user.coursecode}</th>
                 <td>{user.name}</td>
@@ -59,12 +51,12 @@ export default function Home() {
                     to={`/editcourse/${user.coursecode}`}> 
                       Edit
                     </Link>
-                    <button 
+                    <Link 
                     className="btn btn-danger btn-outline-dark mx-auto"
-                    onClick={() => deleteUser(user.coursecode)}
+                    to={`/deletecourse/${user.coursecode}`}
                     > 
                       Delete
-                    </button>
+                    </Link>
                 </td>
               </tr>
                 ))

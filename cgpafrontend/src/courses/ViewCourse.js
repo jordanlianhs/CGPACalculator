@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
-export default function ViewUser() {
+export default function ViewCourse() {
 
     const [course, setCourse] = useState({
         coursecode: "",
@@ -34,7 +34,7 @@ export default function ViewUser() {
       <div className="col-md-6 offset-mdå-3 border rounded p-4 mt-2 shadow">
         <h2 className="text-center mb-3">Course Details</h2>
 
-        <div className="card">
+        <div className="card mb-3">
             <div className="card-header">
                 Details of course
                 <ul className="list-group list-group-flush">
@@ -65,7 +65,7 @@ export default function ViewUser() {
                 </ul>
             </div>
         </div>
-        <Link className= "btn btn-primary" to="/">
+        <Link className= "btn btn-outline-dark" to="/">
             Back to Home
         </Link>
       </div>
