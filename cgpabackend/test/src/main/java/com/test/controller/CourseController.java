@@ -15,13 +15,21 @@ import org.springframework.web.bind.annotation.RestController;
 import com.test.exception.CourseNotFoundException;
 import com.test.model.Course;
 import com.test.repository.CourseRepository;
+import com.test.service.CourseService;
 
 @RestController
 @CrossOrigin("http://localhost:3000")
 public class CourseController{
 
+    private final CourseService courseService;
+
     @Autowired
     private CourseRepository courseRepository;
+
+    @Autowired
+    public CourseController(CourseService courseService){
+        this.courseService = courseService;
+    }
 
     @PostMapping("/addCourses")
     List<Course> newCourses(@RequestBody List<Course> newCourses) {
@@ -65,6 +73,18 @@ public class CourseController{
         }
         courseRepository.deleteById(coursecode);
         return "User with id " + coursecode + " has been deleted successfully";
+    }
+
+    @GetMapping("/getTotalCredits")
+    int getTotalCredits(){
+        List<Course> courses = courseRepository.findAll();
+        return courseService.getTotalCredits(courses);
+    }
+
+    @GetMapping("/calculateCGPA")
+    float calculateCGPA(){
+        List<Course> courses = courseRepository.findAll();
+        return courseService.calculateCGPA(courses);
     }
 }
 
