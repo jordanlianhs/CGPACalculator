@@ -31,7 +31,7 @@ export default function AddCourse() {
   return (
     <div className="container">
       <div className="row justify-content-center mt-2">
-        <div className="col-md-6 offset-mdå-3 border rounded p-4 mt-2 shadow">
+        <div className="col-md-6 border rounded p-4 mt-2 shadow">
           <h2 className="text-center mb-3">Add Course</h2>
           
           <form onSubmit={(e)=>onSubmit(e)}>

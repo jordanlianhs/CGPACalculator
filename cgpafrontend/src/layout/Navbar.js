@@ -9,10 +9,14 @@ export default function Navbar() {
           <Link className="navbar-brand" to={"/"}>
             CGPA Calculator
           </Link>
-          
-          <Link className="btn btn-outline-light" to="addcourse">
-            Add Course
-          </Link>
+          <div className="d-flex">
+            <Link className="btn btn-outline-light me-3" to="addcourses">
+              Add Courses
+            </Link>
+            <Link className="btn btn-outline-light" to="addcourse">
+              Add Course
+            </Link>
+          </div>
         </div>
       </nav>
     </div>

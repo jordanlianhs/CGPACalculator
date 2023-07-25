@@ -4,6 +4,7 @@ import Navbar from './layout/Navbar';
 import Home from './pages/Home';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import AddCourse from './courses/AddCourse';
+import AddCourses from './courses/AddCourses';
 import EditCourse from './courses/EditCourse';
 import ViewCourse from './courses/ViewCourse';
 import DeleteCourse from './courses/DeleteCourse';
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/addcourse' element={<AddCourse />} />
+          <Route path='/addcourses' element={<AddCourses />} />
           <Route path ='/viewcourse/:courseid' element={<ViewCourse />} />
           <Route path='/editcourse/:courseid' element={<EditCourse />} />
           <Route path='/deletecourse/:courseid' element={<DeleteCourse />} />
