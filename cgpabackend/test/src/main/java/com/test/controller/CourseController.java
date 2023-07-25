@@ -86,5 +86,17 @@ public class CourseController{
         List<Course> courses = courseRepository.findAll();
         return courseService.calculateCGPA(courses);
     }
+
+    @GetMapping("/calculateSGPA/{year}/{sem}")
+    float calculateSGPAForYearAndSemester(@PathVariable int year, @PathVariable int sem) {
+        List<Course> courses = courseRepository.findAll();
+        return courseService.calculateSGPA(courses, year, sem);
+    }
+
+    @GetMapping("/calculateSCredit/{year}/{sem}")
+    float calculateSCreditForYearAndSemester(@PathVariable int year, @PathVariable int sem) {
+        List<Course> courses = courseRepository.findAll();
+        return courseService.calculateSCredit(courses, year, sem);
+    }
 }
 

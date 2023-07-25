@@ -12,6 +12,7 @@ export default function Home() {
     loadCourses();
     loadCgpa();
     loadTotalCredits();
+
     const storedCreditToGrad = localStorage.getItem("creditToGrad");
     if (storedCreditToGrad !== null) {
       setCreditToGrad(parseInt(storedCreditToGrad));
@@ -21,6 +22,7 @@ export default function Home() {
   const loadCourses = async () => {
     const result = await axios.get("http://localhost:8080/getCourses");
     setCourses(result.data);
+    console.log(result.data);
   };
   const loadCgpa = async () => {
     const result = await axios.get("http://localhost:8080/calculateCGPA");
@@ -30,11 +32,31 @@ export default function Home() {
     const result = await axios.get("http://localhost:8080/getTotalCredits");
     setTotalCredits(result.data);
   };
+
+
   // Update the creditToGrad state and also store it in localStorage
   const handleCreditToGradChange = (e) => {
     const value = e.target.value;
     setCreditToGrad(value);
     localStorage.setItem("creditToGrad", value);
+  };
+
+  // Function to group courses by year and semester
+  const groupCoursesByYearAndSem = () => {
+    const groupedCourses = courses.reduce(
+      (result, course) => {
+        const { year, sem } = course;
+        const key = `${year}-${sem}`;
+        
+        if (!result[key]) {
+          result[key] = [];
+        }
+        
+        result[key].push(course);
+        return result;
+      }, {});
+
+    return Object.entries(groupedCourses);
   };
 
   return (
@@ -84,35 +106,46 @@ export default function Home() {
             </tr>
           </thead>
           <tbody className="table-group-divider">
-            {courses.map((user) => (
-              <tr className="table-success" key={user.coursecode}>
-                <th scope="row">{user.coursecode}</th>
-                <td>{user.name}</td>
-                <td>{user.credit}</td>
-                <td>{user.grade}</td>
-                <td>{user.year}</td>
-                <td>{user.sem}</td>
-                <td className="d-flex justify-content-between">
-                  <Link
-                    className="btn btn-dark mx-auto"
-                    to={`/viewcourse/${user.coursecode}`}
-                  >
-                    View
-                  </Link>
-                  <Link
-                    className="btn btn-outline-dark mx-auto"
-                    to={`/editcourse/${user.coursecode}`}
-                  >
-                    Edit
-                  </Link>
-                  <Link
-                    className="btn btn-danger btn-outline-dark mx-auto"
-                    to={`/deletecourse/${user.coursecode}`}
-                  >
-                    Delete
-                  </Link>
-                </td>
-              </tr>
+            {groupCoursesByYearAndSem().map(([key, coursesGroup]) => (
+              <React.Fragment key={key}>
+                <tr className="table-secondary">
+                  <th colSpan="7" className="text-center">
+                    Year {coursesGroup[0].year}, Semester {coursesGroup[0].sem}
+                    Semester Credits: {},
+                    Semester GPA (SGPA) {}
+                  </th>
+                </tr>
+                {coursesGroup.map((course) => (
+                  <tr className="table-success" key={course.coursecode}>
+                    <th scope="row">{course.coursecode}</th>
+                    <td>{course.name}</td>
+                    <td>{course.credit}</td>
+                    <td>{course.grade}</td>
+                    <td>{course.year}</td>
+                    <td>{course.sem}</td>
+                    <td className="d-flex justify-content-between">
+                      <Link
+                        className="btn btn-dark mx-auto"
+                        to={`/viewcourse/${course.coursecode}`}
+                      >
+                        View
+                      </Link>
+                      <Link
+                        className="btn btn-outline-dark mx-auto"
+                        to={`/editcourse/${course.coursecode}`}
+                      >
+                        Edit
+                      </Link>
+                      <Link
+                        className="btn btn-danger btn-outline-dark mx-auto"
+                        to={`/deletecourse/${course.coursecode}`}
+                      >
+                        Delete
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
+              </React.Fragment>
             ))}
           </tbody>
         </table>

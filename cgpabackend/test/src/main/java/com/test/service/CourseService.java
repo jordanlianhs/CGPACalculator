@@ -31,6 +31,42 @@ public class CourseService {
         return totalCreditsGrade / totalCredits;
     }
 
+    // Method to calculate SGPA for a specific year and semester
+    public float calculateSGPA(List<Course> courses, int year, int sem) {
+        float sgpa = 0;
+        int totalCredits = 0;
+
+        for (Course course : courses) {
+            if (course.getYear() == year && course.getSem() == sem) {
+                sgpa += course.getCredit() * convertGrade(course.getGrade());
+                totalCredits += course.getCredit();
+            }
+        }
+
+        if (totalCredits == 0) {
+            return 0;
+        }
+
+        return sgpa / totalCredits;
+    }
+
+    // Method to calculate Sem Credit for a specific year and semester
+    public float calculateSCredit(List<Course> courses, int year, int sem) {
+        int totalCredits = 0;
+
+        for (Course course : courses) {
+            if (course.getYear() == year && course.getSem() == sem) {
+                totalCredits += course.getCredit();
+            }
+        }
+
+        if (totalCredits == 0) {
+            return 0;
+        }
+
+        return totalCredits;
+    }
+
     // Helper method to convert the grade to GPA
     private float convertGrade(String grade) {
         // Implement your grade to GPA conversion logic here
