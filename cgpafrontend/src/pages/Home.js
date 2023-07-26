@@ -7,6 +7,9 @@ export default function Home() {
   const [cgpa, setCgpa] = useState(0);
   const [totalCredits, setTotalCredits] = useState(0);
   const [creditToGrad, setCreditToGrad] = useState(0);
+  const [groupedCoursesWithSemInfo, setGroupedCoursesWithSemInfo] = useState(
+    []
+  );
 
   useEffect(() => {
     loadCourses();
@@ -18,6 +21,59 @@ export default function Home() {
       setCreditToGrad(parseInt(storedCreditToGrad));
     }
   }, []);
+
+  useEffect(() => {
+    const fetchGroupedCourses = async () => {
+      try {
+        const result = await groupCoursesByYearAndSem();
+        setGroupedCoursesWithSemInfo(result);
+      } catch (error) {
+        console.error("Error fetching grouped courses:", error);
+      }
+    };
+
+    // Function to group courses by year and semester
+    const groupCoursesByYearAndSem = async () => {
+      const groupedCourses = courses.reduce((result, course) => {
+        const { year, sem } = course;
+        const key = `${year}-${sem}`;
+
+        if (!result[key]) {
+          result[key] = [];
+        }
+
+        result[key].push(course);
+        return result;
+      }, {});
+
+      // Calculate SGPA for each group and update the result object
+      for (const key in groupedCourses) {
+        if (groupedCourses.hasOwnProperty(key)) {
+          const [year, sem] = key.split("-");
+
+          // Fetch SGPA for the specific year and semester
+          try {
+            const sgpaData = await axios.get(
+              `http://localhost:8080/calculateSGPA/${year}/${sem}`
+            );
+            groupedCourses[key].sgpa = sgpaData.data;
+            const sCredit = await axios.get(
+              `http://localhost:8080/calculateSCredit/${year}/${sem}`
+            );
+            groupedCourses[key].semCredits = sCredit.data;
+          } catch (error) {
+            // Handle any errors that occur during the API request
+            console.error(`Error fetching SGPA for ${year}-${sem}:`, error);
+            groupedCourses[key].sgpa = 0; // Set a default value for SGPA in case of error
+            groupedCourses[key].semCredits = 0; // Set a default value for SCredits in case of error
+          }
+        }
+      }
+      return Object.entries(groupedCourses);
+    };
+
+    fetchGroupedCourses();
+  }, [courses]); // Call this useEffect hook whenever 'courses' state changes
 
   const loadCourses = async () => {
     const result = await axios.get("http://localhost:8080/getCourses");
@@ -33,30 +89,11 @@ export default function Home() {
     setTotalCredits(result.data);
   };
 
-
   // Update the creditToGrad state and also store it in localStorage
   const handleCreditToGradChange = (e) => {
     const value = e.target.value;
     setCreditToGrad(value);
     localStorage.setItem("creditToGrad", value);
-  };
-
-  // Function to group courses by year and semester
-  const groupCoursesByYearAndSem = () => {
-    const groupedCourses = courses.reduce(
-      (result, course) => {
-        const { year, sem } = course;
-        const key = `${year}-${sem}`;
-        
-        if (!result[key]) {
-          result[key] = [];
-        }
-        
-        result[key].push(course);
-        return result;
-      }, {});
-
-    return Object.entries(groupedCourses);
   };
 
   return (
@@ -85,7 +122,7 @@ export default function Home() {
               </td>
               <td>{totalCredits}</td>
               <td>{creditToGrad - totalCredits}</td>
-              <td>{cgpa}</td> 
+              <td>{cgpa}</td>
               {/* .toPrecision(3) */}
             </tr>
           </tbody>
@@ -106,13 +143,14 @@ export default function Home() {
             </tr>
           </thead>
           <tbody className="table-group-divider">
-            {groupCoursesByYearAndSem().map(([key, coursesGroup]) => (
+            {groupedCoursesWithSemInfo.map(([key, coursesGroup]) => (
               <React.Fragment key={key}>
                 <tr className="table-secondary">
                   <th colSpan="7" className="text-center">
-                    Year {coursesGroup[0].year}, Semester {coursesGroup[0].sem}
-                    Semester Credits: {},
-                    Semester GPA (SGPA) {}
+                    Year {coursesGroup[0].year}, Semester {coursesGroup[0].sem},{" "}
+                    <t /> <t />
+                    Semester Credits: {coursesGroup.semCredits}, Semester GPA
+                    (SGPA): {coursesGroup.sgpa}
                   </th>
                 </tr>
                 {coursesGroup.map((course) => (
