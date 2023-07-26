@@ -9,6 +9,11 @@ export default function Navbar() {
           <Link className="navbar-brand" to={"/"}>
             CGPA Calculator
           </Link>
+          <div>
+            <Link className="btn btn-outline-light me-3" to="converter">
+              Convert HTML of Courses to JSON
+            </Link>
+          </div>
           <div className="d-flex">
             <Link className="btn btn-outline-light me-3" to="addcourses">
               Add Courses

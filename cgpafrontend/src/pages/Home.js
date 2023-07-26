@@ -69,6 +69,7 @@ export default function Home() {
           }
         }
       }
+      console.log(groupedCourses);
       return Object.entries(groupedCourses);
     };
 
@@ -147,8 +148,7 @@ export default function Home() {
               <React.Fragment key={key}>
                 <tr className="table-secondary">
                   <th colSpan="7" className="text-center">
-                    Year {coursesGroup[0].year}, Semester {coursesGroup[0].sem},{" "}
-                    <t /> <t />
+                    Year {coursesGroup[0].year}, Semester {coursesGroup[0].sem},
                     Semester Credits: {coursesGroup.semCredits}, Semester GPA
                     (SGPA): {coursesGroup.sgpa}
                   </th>

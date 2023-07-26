@@ -72,7 +72,7 @@ public class CourseService {
         // Implement your grade to GPA conversion logic here
         // For simplicity, I'll leave it as it is
         // You can update it based on your grade scale
-        switch (grade) {
+        switch(grade.toUpperCase()){
             case "A+":
                 return 5.0f;
             case "A":
@@ -81,7 +81,28 @@ public class CourseService {
                 return 4.5f;
             case "B+":
                 return 4.0f;
-            // Add more cases for other grades
+            case "B":
+                return 3.5f;
+            case "B-":
+                return 3.0f;
+            case "C+":
+                return 2.5f;
+            case "C":  
+                return 2.0f;
+            case "D+":
+                return 1.5f;
+            case "D":
+                return 1.0f;
+            case "F":
+                return 0.0f;
+            case "S":
+                return 0.0f;
+            case "U":
+                return 0.0f;
+            case "EX":
+                return 5.0f;
+            case "P":
+                return 5.0f;
             default:
                 return 0.0f;
         }
