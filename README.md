@@ -1,5 +1,5 @@
 # CGPACalculator 
-Calculates CGPA and SGPA for University Students  
+Calculates CGPA and SGPA for NTU Students  
 
 ## Backend: springboot commands within cgpabackend 
 mvn clean install -DskipTests </br>
