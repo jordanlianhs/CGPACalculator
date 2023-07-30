@@ -6,6 +6,6 @@ mvn clean install -DskipTests </br>
 mvn spring-boot:run
 
 ## Frontend: npm commands within cgpafrontend
-npx create-react-app cgpafrontend
-npm install
-npm start
+npx create-react-app cgpafrontend </br>
+npm install </br>
+npm start </br>
