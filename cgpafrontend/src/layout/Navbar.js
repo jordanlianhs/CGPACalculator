@@ -15,6 +15,9 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="d-flex">
+            <Link className="btn btn-outline-light me-3" to="addcourseviajson">
+              Add Course Via JSON
+            </Link>
             <Link className="btn btn-outline-light me-3" to="addcourses">
               Add Courses
             </Link>

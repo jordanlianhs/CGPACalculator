@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { compareDesc } from "date-fns";
 
 export default function Home() {
   const [courses, setCourses] = useState([]);
   const [cgpa, setCgpa] = useState(0);
   const [totalCredits, setTotalCredits] = useState(0);
   const [creditToGrad, setCreditToGrad] = useState(0);
-  const [groupedCoursesWithSemInfo, setGroupedCoursesWithSemInfo] = useState(
-    []
-  );
+  const [groupedCoursesWithSemInfo, setGroupedCoursesWithSemInfo] = useState([]);
 
   useEffect(() => {
     loadCourses();
@@ -46,31 +45,41 @@ export default function Home() {
         return result;
       }, {});
 
-      // Calculate SGPA for each group and update the result object
-      for (const key in groupedCourses) {
-        if (groupedCourses.hasOwnProperty(key)) {
-          const [year, sem] = key.split("-");
+      // Sort the keys representing year and semester in reverse order
+      const sortedKeys = Object.keys(groupedCourses).sort((a, b) => {
+        const [yearA, semA] = a.split("-");
+        const [yearB, semB] = b.split("-");
+        return compareDesc(new Date(yearA, semA), new Date(yearB, semB));
+      });
 
-          // Fetch SGPA for the specific year and semester
-          try {
-            const sgpaData = await axios.get(
-              `http://localhost:8080/calculateSGPA/${year}/${sem}`
-            );
-            groupedCourses[key].sgpa = sgpaData.data;
-            const sCredit = await axios.get(
-              `http://localhost:8080/calculateSCredit/${year}/${sem}`
-            );
-            groupedCourses[key].semCredits = sCredit.data;
-          } catch (error) {
-            // Handle any errors that occur during the API request
-            console.error(`Error fetching SGPA for ${year}-${sem}:`, error);
-            groupedCourses[key].sgpa = 0; // Set a default value for SGPA in case of error
-            groupedCourses[key].semCredits = 0; // Set a default value for SCredits in case of error
-          }
+      // Create an array of [key, courses] pairs in the sorted order
+      const sortedGroupedCourses = sortedKeys.map((key) => [
+        key,
+        groupedCourses[key],
+      ]);
+
+      for (const [key, coursesGroup] of sortedGroupedCourses) {
+        const [year, sem] = key.split("-");
+
+        // Fetch SGPA for the specific year and semester
+        try {
+          const sgpaData = await axios.get(
+            `http://localhost:8080/calculateSGPA/${year}/${sem}`
+          );
+          coursesGroup.sgpa = sgpaData.data;
+          const sCredit = await axios.get(
+            `http://localhost:8080/calculateSCredit/${year}/${sem}`
+          );
+          coursesGroup.semCredits = sCredit.data;
+        } catch (error) {
+          // Handle any errors that occur during the API request
+          console.error(`Error fetching SGPA for ${year}-${sem}:`, error);
+          coursesGroup.sgpa = 0; // Set a default value for SGPA in case of error
+          coursesGroup.semCredits = 0; // Set a default value for SCredits in case of error
         }
       }
-      console.log(groupedCourses);
-      return Object.entries(groupedCourses);
+
+      return sortedGroupedCourses;
     };
 
     fetchGroupedCourses();

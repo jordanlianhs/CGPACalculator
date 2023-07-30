@@ -21,9 +21,12 @@ public class CourseService {
     // Method to calculate CGPA
     public float calculateCGPA(List<Course> courses) {
         float totalCreditsGrade = 0;
-        int totalCredits = getTotalCredits(courses);
+        int totalCredits = 0;
         for (Course course : courses) {
+            if (course.getGrade().equals("EX") || course.getGrade().equals("P")) 
+                continue;
             totalCreditsGrade += course.getCredit() * convertGrade(course.getGrade());
+            totalCredits += course.getCredit();
         }
         if (totalCredits == 0) {
             return 0;
@@ -38,6 +41,8 @@ public class CourseService {
 
         for (Course course : courses) {
             if (course.getYear() == year && course.getSem() == sem) {
+                if (course.getGrade().equals("EX") || course.getGrade().equals("P")) 
+                    continue;
                 sgpa += course.getCredit() * convertGrade(course.getGrade());
                 totalCredits += course.getCredit();
             }

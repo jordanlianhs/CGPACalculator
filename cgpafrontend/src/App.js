@@ -9,6 +9,7 @@ import EditCourse from './courses/EditCourse';
 import ViewCourse from './courses/ViewCourse';
 import DeleteCourse from './courses/DeleteCourse';
 import Converter from './courses/Converter';
+import AddCourseViaJson from './courses/AddCourseViaJson';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/converter' element={<Converter />} />
           <Route path='/addcourse' element={<AddCourse />} />
           <Route path='/addcourses' element={<AddCourses />} />
+          <Route path='/addcourseviajson' element={<AddCourseViaJson />} />
           <Route path ='/viewcourse/:courseid' element={<ViewCourse />} />
           <Route path='/editcourse/:courseid' element={<EditCourse />} />
           <Route path='/deletecourse/:courseid' element={<DeleteCourse />} />
