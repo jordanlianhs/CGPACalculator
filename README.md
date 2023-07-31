@@ -22,6 +22,6 @@ Below is the UML Class Diagram of the structure of my Course Model along with th
 ![Model Image](https://github.com/jordanlianhs/CGPACalculator/blob/main/images/model.png)
 
 ## How to use
-<ol> After loading into the the application hosted on localhost:3000, you will be greeted with an empty course page with no courses. 
+After loading into the the application hosted on localhost:3000, you will be greeted with an empty course page with no courses. 
 ![No Course Image](https://github.com/jordanlianhs/CGPACalculator/blob/main/images/Img0.png)
-</ol>
+
