@@ -12,6 +12,7 @@ If you have any suggestions do feel free to lmk
 
 ## Backend: springboot commands within cgpabackend 
 In application.properties, CGPACalculator/cgpabackend/test/src/main/resources/application.properties, make sure to configure the datasource to your database. </br>
+cd cgpabackend/test
 mvn clean install -DskipTests </br>
 mvn spring-boot:run
 
