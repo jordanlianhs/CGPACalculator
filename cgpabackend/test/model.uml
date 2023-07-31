@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Persistency="http:///schemas/Persistency/NS/0" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/Persistency/NS/0 pathmap://PERSISTENCY_PROFILES/Persistency.profile.uml#Persistency_2-Annotation-Persistency http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_shtWUC9xEe6-k_O8MOAy3Q" name="model">
+    <eAnnotations xmi:id="_soXX8C9xEe6-k_O8MOAy3Q" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_soabQC9xEe6-k_O8MOAy3Q" source="codegen">
+        <details xmi:id="_sodekC9xEe6-k_O8MOAy3Q" key="codegenDirectory" value="/test/src/test/java"/>
+        <details xmi:id="_wMC6EC9xEe6-k_O8MOAy3Q" key="AssociatedSourceCode" value="/test/src/main/java/com/test/model/Course.java;3721229752/1;/test/src/main/java/com/test/controller/CourseController.java;1772697419/1;/test/src/main/java/com/test/exception/CourseNotFoundException.java;1653580993/1;/test/src/main/java/com/test/exception/UserNotFoundAdvice.java;267205250/1;/test/src/main/java/com/test/repository/CourseRepository.java;2045321129/1;/test/src/main/java/com/test/service/CourseService.java;3752741365/1;/test/src/main/java/com/test/DemoApplication.java;1395014041/1;/test/src/test/java/com/test/TestApplicationTests.java;3335281467/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_s95jEC9xEe6-k_O8MOAy3Q">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_s96KIC9xEe6-k_O8MOAy3Q">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_s96KIS9xEe6-k_O8MOAy3Q">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_s96KIi9xEe6-k_O8MOAy3Q">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_s96KIy9xEe6-k_O8MOAy3Q">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_s96KJC9xEe6-k_O8MOAy3Q">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_s96xMC9xEe6-k_O8MOAy3Q">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_s96xMS9xEe6-k_O8MOAy3Q">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_s96xMi9xEe6-k_O8MOAy3Q">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_s5RhwC9xEe6-k_O8MOAy3Q" name="com">
+      <packagedElement xmi:type="uml:Package" xmi:id="_s5VMIC9xEe6-k_O8MOAy3Q" name="test">
+        <packagedElement xmi:type="uml:Package" xmi:id="_s5dvAC9xEe6-k_O8MOAy3Q" name="exception">
+          <packagedElement xmi:type="uml:Class" xmi:id="_s-96EC9xEe6-k_O8MOAy3Q" name="CourseNotFoundException">
+            <eAnnotations xmi:id="_s_A9YC9xEe6-k_O8MOAy3Q" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_s_CykC9xEe6-k_O8MOAy3Q" source="codegen">
+                <details xmi:id="_s_DZoC9xEe6-k_O8MOAy3Q" key="codegenDirectory" value="/test/src/main/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_tSQpgC9xEe6-k_O8MOAy3Q" general="_tSM_IC9xEe6-k_O8MOAy3Q"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTmGQC9xEe6-k_O8MOAy3Q" name="CourseNotFoundException" specification="_s_Gc8C9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTmGQS9xEe6-k_O8MOAy3Q" name="coursecode">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tTmGQi9xEe6-k_O8MOAy3Q" type="_s-96EC9xEe6-k_O8MOAy3Q" direction="return"/>
+              <language>java</language>
+              <body>super(&quot;Could not find course with coursecode: &quot;+coursecode);
+ </body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_s_Gc8C9xEe6-k_O8MOAy3Q" name="CourseNotFoundException" method="_tTmGQC9xEe6-k_O8MOAy3Q">
+              <eAnnotations xmi:id="_s_ISIC9xEe6-k_O8MOAy3Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_s_JgQC9xEe6-k_O8MOAy3Q" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_s_HEAC9xEe6-k_O8MOAy3Q" name="coursecode">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_s_JgQS9xEe6-k_O8MOAy3Q" type="_s-96EC9xEe6-k_O8MOAy3Q" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_s_KHUC9xEe6-k_O8MOAy3Q" name="UserNotFoundAdvice">
+            <eAnnotations xmi:id="_s_LVcC9xEe6-k_O8MOAy3Q" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_s_LVcS9xEe6-k_O8MOAy3Q" source="codegen">
+                <details xmi:id="_s_LVci9xEe6-k_O8MOAy3Q" key="codegenDirectory" value="/test/src/main/java"/>
+              </contents>
+            </eAnnotations>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTnUYC9xEe6-k_O8MOAy3Q" name="exceptionHandler" specification="_tRU1YS9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTnUYS9xEe6-k_O8MOAy3Q" name="exception" type="_s-96EC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tTnUYi9xEe6-k_O8MOAy3Q" type="_tQ-3IS9xEe6-k_O8MOAy3Q" direction="return"/>
+              <language>java</language>
+              <body>Map &lt;String,String> errorMap = new HashMap&lt;>();
+     errorMap.put(&quot;errorMessage&quot;, exception.getMessage());
+
+     return errorMap;
+ </body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_tRU1YS9xEe6-k_O8MOAy3Q" name="exceptionHandler" method="_tTnUYC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tRVccC9xEe6-k_O8MOAy3Q" name="exception" type="_s-96EC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tSRQkC9xEe6-k_O8MOAy3Q" type="_tQ-3IS9xEe6-k_O8MOAy3Q" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_s5fkMC9xEe6-k_O8MOAy3Q" name="model">
+          <packagedElement xmi:type="uml:Class" xmi:id="_s_RcEC9xEe6-k_O8MOAy3Q" name="Course">
+            <eAnnotations xmi:id="_s_SDIC9xEe6-k_O8MOAy3Q" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_s_SDIS9xEe6-k_O8MOAy3Q" source="codegen">
+                <details xmi:id="_s_SDIi9xEe6-k_O8MOAy3Q" key="codegenDirectory" value="/test/src/main/java"/>
+              </contents>
+            </eAnnotations>
+            <ownedAttribute xmi:id="_tTA3cS9xEe6-k_O8MOAy3Q" name="coursecode">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_tTCsoC9xEe6-k_O8MOAy3Q" name="name">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_tTCsoi9xEe6-k_O8MOAy3Q" name="credit">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_tTCspC9xEe6-k_O8MOAy3Q" name="grade">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_tTDTsS9xEe6-k_O8MOAy3Q" name="year">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_tTD6wS9xEe6-k_O8MOAy3Q" name="sem">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_s_dpUC9xEe6-k_O8MOAy3Q" name="Course">
+              <eAnnotations xmi:id="_s_eQYC9xEe6-k_O8MOAy3Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_s_eQYS9xEe6-k_O8MOAy3Q" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_s_e3cS9xEe6-k_O8MOAy3Q" type="_s_RcEC9xEe6-k_O8MOAy3Q" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_s5gLQC9xEe6-k_O8MOAy3Q" name="repository">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_s_h6wC9xEe6-k_O8MOAy3Q" name="CourseRepository">
+            <eAnnotations xmi:id="_s_jI4C9xEe6-k_O8MOAy3Q" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_s_jI4S9xEe6-k_O8MOAy3Q" source="codegen">
+                <details xmi:id="_s_jv8C9xEe6-k_O8MOAy3Q" key="codegenDirectory" value="/test/src/main/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_tSR3oC9xEe6-k_O8MOAy3Q" general="_tRl7IC9xEe6-k_O8MOAy3Q"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_s5gyUC9xEe6-k_O8MOAy3Q" name="service">
+          <packagedElement xmi:type="uml:Class" xmi:id="_s_rEsC9xEe6-k_O8MOAy3Q" name="CourseService">
+            <eAnnotations xmi:id="_s_1cwC9xEe6-k_O8MOAy3Q" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_s_2D0C9xEe6-k_O8MOAy3Q" source="codegen">
+                <details xmi:id="_s_2D0S9xEe6-k_O8MOAy3Q" key="codegenDirectory" value="/test/src/main/java"/>
+              </contents>
+            </eAnnotations>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTnUYy9xEe6-k_O8MOAy3Q" name="getTotalCredits" specification="_tSWJEC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTnUZC9xEe6-k_O8MOAy3Q" name="courses" type="_tPBvUC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tTnUZS9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>int totalCredits = 0;
+     for (Course course : courses) {
+         totalCredits += course.getCredit();
+     }
+     return totalCredits;
+ </body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTnUZi9xEe6-k_O8MOAy3Q" name="calculateCGPA" specification="_tSbBkC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTnUZy9xEe6-k_O8MOAy3Q" name="courses" type="_tPBvUC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tTnUaC9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>float totalCreditsGrade = 0;
+     int totalCredits = 0;
+     for (Course course : courses) {
+         if (course.getGrade().equals(&quot;EX&quot;) || course.getGrade().equals(&quot;P&quot;)) 
+             continue;
+         totalCreditsGrade += course.getCredit() * convertGrade(course.getGrade());
+         totalCredits += course.getCredit();
+     }
+     if (totalCredits == 0) {
+         return 0;
+     }
+     return totalCreditsGrade / totalCredits;
+ </body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTn7cC9xEe6-k_O8MOAy3Q" name="calculateSGPA" specification="_tShIMC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTn7cS9xEe6-k_O8MOAy3Q" name="courses" type="_tPBvUC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tTn7ci9xEe6-k_O8MOAy3Q" name="year">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tTn7cy9xEe6-k_O8MOAy3Q" name="sem">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tTn7dC9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>float sgpa = 0;
+     int totalCredits = 0;
+
+     for (Course course : courses) {
+         if (course.getYear() == year &amp;&amp; course.getSem() == sem) {
+             if (course.getGrade().equals(&quot;EX&quot;) || course.getGrade().equals(&quot;P&quot;)) 
+                 continue;
+             sgpa += course.getCredit() * convertGrade(course.getGrade());
+             totalCredits += course.getCredit();
+         }
+     }
+
+     if (totalCredits == 0) {
+         return 0;
+     }
+
+     return sgpa / totalCredits;
+ </body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTsz8C9xEe6-k_O8MOAy3Q" name="calculateSCredit" specification="_tSkykS9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTsz8S9xEe6-k_O8MOAy3Q" name="courses" type="_tPBvUC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tTsz8i9xEe6-k_O8MOAy3Q" name="year">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tTsz8y9xEe6-k_O8MOAy3Q" name="sem">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tTsz9C9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>int totalCredits = 0;
+
+     for (Course course : courses) {
+         if (course.getYear() == year &amp;&amp; course.getSem() == sem) {
+             totalCredits += course.getCredit();
+         }
+     }
+
+     if (totalCredits == 0) {
+         return 0;
+     }
+
+     return totalCredits;
+ </body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tT194C9xEe6-k_O8MOAy3Q" name="convertGrade" specification="_s_7jYC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tT194S9xEe6-k_O8MOAy3Q" name="grade">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tT194i9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>// Implement your grade to GPA conversion logic here
+     // For simplicity, I'll leave it as it is
+     // You can update it based on your grade scale
+     switch(grade.toUpperCase()){
+         case &quot;A+&quot;:
+             return 5.0f;
+         case &quot;A&quot;:
+             return 5.0f;
+         case &quot;A-&quot;:
+             return 4.5f;
+         case &quot;B+&quot;:
+             return 4.0f;
+         case &quot;B&quot;:
+             return 3.5f;
+         case &quot;B-&quot;:
+             return 3.0f;
+         case &quot;C+&quot;:
+             return 2.5f;
+         case &quot;C&quot;:  
+             return 2.0f;
+         case &quot;D+&quot;:
+             return 1.5f;
+         case &quot;D&quot;:
+             return 1.0f;
+         case &quot;F&quot;:
+             return 0.0f;
+         case &quot;S&quot;:
+             return 0.0f;
+         case &quot;U&quot;:
+             return 0.0f;
+         case &quot;EX&quot;:
+             return 5.0f;
+         case &quot;P&quot;:
+             return 5.0f;
+         default:
+             return 0.0f;
+     }
+ </body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_s_7jYC9xEe6-k_O8MOAy3Q" name="convertGrade" visibility="private" method="_tT194C9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_s_8KcC9xEe6-k_O8MOAy3Q" name="grade">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_s_9YkC9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_tSWJEC9xEe6-k_O8MOAy3Q" name="getTotalCredits" method="_tTnUYy9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tSWJES9xEe6-k_O8MOAy3Q" name="courses" type="_tPBvUC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tSWJEi9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_tSbBkC9xEe6-k_O8MOAy3Q" name="calculateCGPA" method="_tTnUZi9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tSbBkS9xEe6-k_O8MOAy3Q" name="courses" type="_tPBvUC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tScPsC9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_tShIMC9xEe6-k_O8MOAy3Q" name="calculateSGPA" method="_tTn7cC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tShIMS9xEe6-k_O8MOAy3Q" name="courses" type="_tPBvUC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tShIMi9xEe6-k_O8MOAy3Q" name="year">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tShIMy9xEe6-k_O8MOAy3Q" name="sem">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tShINC9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_tSkykS9xEe6-k_O8MOAy3Q" name="calculateSCredit" method="_tTsz8C9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tSkyki9xEe6-k_O8MOAy3Q" name="courses" type="_tPBvUC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tSkyky9xEe6-k_O8MOAy3Q" name="year">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tSkylC9xEe6-k_O8MOAy3Q" name="sem">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tSkylS9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_s6rP8C9xEe6-k_O8MOAy3Q" name="controller">
+          <packagedElement xmi:type="uml:Class" xmi:id="_s9X-oC9xEe6-k_O8MOAy3Q" name="CourseController">
+            <eAnnotations xmi:id="_s9mBEC9xEe6-k_O8MOAy3Q" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_s9moIC9xEe6-k_O8MOAy3Q" source="codegen">
+                <details xmi:id="_s9nPMC9xEe6-k_O8MOAy3Q" key="codegenDirectory" value="/test/src/main/java"/>
+              </contents>
+            </eAnnotations>
+            <ownedAttribute xmi:id="_tS6JwC9xEe6-k_O8MOAy3Q" name="courseService" visibility="private" isLeaf="true" type="_s_rEsC9xEe6-k_O8MOAy3Q" isReadOnly="true" association="_tUYJYC9xEe6-k_O8MOAy3Q"/>
+            <ownedAttribute xmi:id="_tS-bMC9xEe6-k_O8MOAy3Q" name="courseRepository" visibility="private" type="_s_h6wC9xEe6-k_O8MOAy3Q" association="_tUjIgC9xEe6-k_O8MOAy3Q"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTNrwC9xEe6-k_O8MOAy3Q" name="CourseController" specification="_tQoR0C9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTOS0C9xEe6-k_O8MOAy3Q" name="courseService" type="_s_rEsC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tTOS0S9xEe6-k_O8MOAy3Q" type="_s9X-oC9xEe6-k_O8MOAy3Q" direction="return"/>
+              <language>java</language>
+              <body>this.courseService = courseService;
+ </body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTTLUC9xEe6-k_O8MOAy3Q" name="newCourses" specification="_tSGRcC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTTLUS9xEe6-k_O8MOAy3Q" name="newCourses" type="_tPBvUC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tTTLUi9xEe6-k_O8MOAy3Q" type="_s_RcEC9xEe6-k_O8MOAy3Q" isOrdered="true" direction="return">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tTTLUy9xEe6-k_O8MOAy3Q" value="*"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return courseRepository.saveAll(newCourses);
+ </body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTTyYC9xEe6-k_O8MOAy3Q" name="newCourse" specification="_tQz4AC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTTyYS9xEe6-k_O8MOAy3Q" name="newCourse" type="_s_RcEC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tTTyYi9xEe6-k_O8MOAy3Q" type="_s_RcEC9xEe6-k_O8MOAy3Q" direction="return"/>
+              <language>java</language>
+              <body>return courseRepository.save(newCourse);
+ </body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTUZcC9xEe6-k_O8MOAy3Q" name="getCourses" specification="_s-A30C9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTUZcS9xEe6-k_O8MOAy3Q" type="_s_RcEC9xEe6-k_O8MOAy3Q" isOrdered="true" direction="return">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tTUZci9xEe6-k_O8MOAy3Q" value="*"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return courseRepository.findAll();
+ </body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTUZcy9xEe6-k_O8MOAy3Q" name="getCourse" specification="_s-bukC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTVAgC9xEe6-k_O8MOAy3Q" name="coursecode">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tTVAgS9xEe6-k_O8MOAy3Q" type="_s_RcEC9xEe6-k_O8MOAy3Q" direction="return"/>
+              <language>java</language>
+              <body>return courseRepository.findById(coursecode)
+     .orElseThrow(()->new CourseNotFoundException(coursecode));
+ </body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tThNwC9xEe6-k_O8MOAy3Q" name="updateCourse" specification="_tQ2UQS9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tThNwS9xEe6-k_O8MOAy3Q" name="newCourse" type="_s_RcEC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tTh00C9xEe6-k_O8MOAy3Q" name="coursecode">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tTh00S9xEe6-k_O8MOAy3Q" type="_s_RcEC9xEe6-k_O8MOAy3Q" direction="return"/>
+              <language>java</language>
+              <body>return courseRepository.findById(coursecode)
+     .map(course->{
+         course.setCoursecode(newCourse.getCoursecode());
+         course.setName(newCourse.getName());
+         course.setCredit(newCourse.getCredit());
+         course.setGrade(newCourse.getGrade());
+         course.setYear(newCourse.getYear());
+         course.setSem(newCourse.getSem());
+         return courseRepository.save(course);
+     }).orElseThrow(()->new CourseNotFoundException(coursecode));
+ </body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTh00i9xEe6-k_O8MOAy3Q" name="deleteCourse" specification="_s-kRcC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTh00y9xEe6-k_O8MOAy3Q" name="coursecode">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tTh01C9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>if(!courseRepository.existsById(coursecode)){
+         throw new CourseNotFoundException(coursecode);
+     }
+     courseRepository.deleteById(coursecode);
+     return &quot;User with id &quot; + coursecode + &quot; has been deleted successfully&quot;;
+ </body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTib4C9xEe6-k_O8MOAy3Q" name="getTotalCredits" specification="_s-rmMC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTib4S9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>List&lt;Course> courses = courseRepository.findAll();
+     return courseService.getTotalCredits(courses);
+ </body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTjqAC9xEe6-k_O8MOAy3Q" name="calculateCGPA" specification="_s-s0Uy9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTjqAS9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>List&lt;Course> courses = courseRepository.findAll();
+     return courseService.calculateCGPA(courses);
+ </body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTkREC9xEe6-k_O8MOAy3Q" name="calculateSGPAForYearAndSemester" specification="_s-uCcS9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTkRES9xEe6-k_O8MOAy3Q" name="year">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tTkREi9xEe6-k_O8MOAy3Q" name="sem">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tTkREy9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>List&lt;Course> courses = courseRepository.findAll();
+     return courseService.calculateSGPA(courses, year, sem);
+ </body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tTk4IC9xEe6-k_O8MOAy3Q" name="calculateSCreditForYearAndSemester" specification="_s-xs0C9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tTk4IS9xEe6-k_O8MOAy3Q" name="year">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tTk4Ii9xEe6-k_O8MOAy3Q" name="sem">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tTk4Iy9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>List&lt;Course> courses = courseRepository.findAll();
+     return courseService.calculateSCredit(courses, year, sem);
+ </body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_s-A30C9xEe6-k_O8MOAy3Q" name="getCourses" visibility="package" method="_tTUZcC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_s-EiMC9xEe6-k_O8MOAy3Q" type="_s_RcEC9xEe6-k_O8MOAy3Q" isOrdered="true" direction="return">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s-FwUC9xEe6-k_O8MOAy3Q" value="*"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_s-bukC9xEe6-k_O8MOAy3Q" name="getCourse" visibility="package" method="_tTUZcy9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_s-cVoC9xEe6-k_O8MOAy3Q" name="coursecode">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tQ2UQC9xEe6-k_O8MOAy3Q" type="_s_RcEC9xEe6-k_O8MOAy3Q" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_s-kRcC9xEe6-k_O8MOAy3Q" name="deleteCourse" visibility="package" method="_tTh00i9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_s-k4gC9xEe6-k_O8MOAy3Q" name="coursecode">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_s-k4gS9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_s-rmMC9xEe6-k_O8MOAy3Q" name="getTotalCredits" visibility="package" method="_tTib4C9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_s-sNQC9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_s-s0Uy9xEe6-k_O8MOAy3Q" name="calculateCGPA" visibility="package" method="_tTjqAC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_s-s0VC9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_s-uCcS9xEe6-k_O8MOAy3Q" name="calculateSGPAForYearAndSemester" visibility="package" method="_tTkREC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_s-upgC9xEe6-k_O8MOAy3Q" name="year">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_s-upgS9xEe6-k_O8MOAy3Q" name="sem">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_s-vQkC9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_s-xs0C9xEe6-k_O8MOAy3Q" name="calculateSCreditForYearAndSemester" visibility="package" method="_tTk4IC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_s-xs0S9xEe6-k_O8MOAy3Q" name="year">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_s-xs0i9xEe6-k_O8MOAy3Q" name="sem">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_s-yT4C9xEe6-k_O8MOAy3Q" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_tQoR0C9xEe6-k_O8MOAy3Q" name="CourseController" method="_tTNrwC9xEe6-k_O8MOAy3Q">
+              <eAnnotations xmi:id="_tQr8MC9xEe6-k_O8MOAy3Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_tQsjQC9xEe6-k_O8MOAy3Q" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_tQo44C9xEe6-k_O8MOAy3Q" name="courseService" type="_s_rEsC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tQuYcC9xEe6-k_O8MOAy3Q" type="_s9X-oC9xEe6-k_O8MOAy3Q" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_tQz4AC9xEe6-k_O8MOAy3Q" name="newCourse" visibility="package" method="_tTTyYC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tQz4AS9xEe6-k_O8MOAy3Q" name="newCourse" type="_s_RcEC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tQ0fEC9xEe6-k_O8MOAy3Q" type="_s_RcEC9xEe6-k_O8MOAy3Q" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_tQ2UQS9xEe6-k_O8MOAy3Q" name="updateCourse" visibility="package" method="_tThNwC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tQ2UQi9xEe6-k_O8MOAy3Q" name="newCourse" type="_s_RcEC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tQ2UQy9xEe6-k_O8MOAy3Q" name="coursecode">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_tQ27UC9xEe6-k_O8MOAy3Q" type="_s_RcEC9xEe6-k_O8MOAy3Q" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_tSGRcC9xEe6-k_O8MOAy3Q" name="newCourses" visibility="package" method="_tTTLUC9xEe6-k_O8MOAy3Q">
+              <ownedParameter xmi:id="_tSGRcS9xEe6-k_O8MOAy3Q" name="newCourses" type="_tPBvUC9xEe6-k_O8MOAy3Q"/>
+              <ownedParameter xmi:id="_tSGRci9xEe6-k_O8MOAy3Q" type="_s_RcEC9xEe6-k_O8MOAy3Q" isOrdered="true" direction="return">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tSGRcy9xEe6-k_O8MOAy3Q" value="*"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_tUYJYC9xEe6-k_O8MOAy3Q" name="" memberEnd="_tUYJYS9xEe6-k_O8MOAy3Q _tS6JwC9xEe6-k_O8MOAy3Q">
+            <ownedEnd xmi:id="_tUYJYS9xEe6-k_O8MOAy3Q" name="" type="_s9X-oC9xEe6-k_O8MOAy3Q" association="_tUYJYC9xEe6-k_O8MOAy3Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_tUjIgC9xEe6-k_O8MOAy3Q" name="" memberEnd="_tUjIgS9xEe6-k_O8MOAy3Q _tS-bMC9xEe6-k_O8MOAy3Q">
+            <ownedEnd xmi:id="_tUjIgS9xEe6-k_O8MOAy3Q" name="" type="_s9X-oC9xEe6-k_O8MOAy3Q" association="_tUjIgC9xEe6-k_O8MOAy3Q"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_tAEtUC9xEe6-k_O8MOAy3Q" name="DemoApplication">
+          <eAnnotations xmi:id="_tAFUYC9xEe6-k_O8MOAy3Q" source="http://ns.yatta.de/umllab">
+            <contents xmi:type="ecore:EAnnotation" xmi:id="_tAFUYS9xEe6-k_O8MOAy3Q" source="codegen">
+              <details xmi:id="_tAFUYi9xEe6-k_O8MOAy3Q" key="codegenDirectory" value="/test/src/main/java"/>
+            </contents>
+          </eAnnotations>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tT8EgC9xEe6-k_O8MOAy3Q" name="main" specification="_tAHwoC9xEe6-k_O8MOAy3Q">
+            <ownedParameter xmi:id="_tT8EgS9xEe6-k_O8MOAy3Q" name="args">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tT8Egi9xEe6-k_O8MOAy3Q" value="*"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>SpringApplication.run(DemoApplication.class, args);
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_tAHwoC9xEe6-k_O8MOAy3Q" name="main" isStatic="true" method="_tT8EgC9xEe6-k_O8MOAy3Q">
+            <ownedParameter xmi:id="_tAHwoS9xEe6-k_O8MOAy3Q" name="args">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tAI-wC9xEe6-k_O8MOAy3Q" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_tAKz8C9xEe6-k_O8MOAy3Q" name="TestApplicationTests" visibility="package">
+          <ownedOperation xmi:id="_tALbAS9xEe6-k_O8MOAy3Q" name="contextLoads" visibility="package"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_s5arsC9xEe6-k_O8MOAy3Q" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_s5arsS9xEe6-k_O8MOAy3Q" name="util">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_tPBvUC9xEe6-k_O8MOAy3Q" name="List"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_tQ5XkC9xEe6-k_O8MOAy3Q" name="HashMap"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_tQ-3IS9xEe6-k_O8MOAy3Q" name="Map"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_tSMYEC9xEe6-k_O8MOAy3Q" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_tSM_IC9xEe6-k_O8MOAy3Q" name="RuntimeException"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_s5bSwC9xEe6-k_O8MOAy3Q" name="org">
+      <packagedElement xmi:type="uml:Package" xmi:id="_s5b50C9xEe6-k_O8MOAy3Q" name="springframework">
+        <packagedElement xmi:type="uml:Package" xmi:id="_s5b50S9xEe6-k_O8MOAy3Q" name="beans">
+          <packagedElement xmi:type="uml:Package" xmi:id="_s5cg4C9xEe6-k_O8MOAy3Q" name="factory">
+            <packagedElement xmi:type="uml:Package" xmi:id="_s5cg4S9xEe6-k_O8MOAy3Q" name="annotation">
+              <packagedElement xmi:type="uml:Interface" xmi:id="_tPrPkC9xEe6-k_O8MOAy3Q" name="Autowired"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_s5dH8C9xEe6-k_O8MOAy3Q" name="web">
+          <packagedElement xmi:type="uml:Package" xmi:id="_s5dH8S9xEe6-k_O8MOAy3Q" name="bind">
+            <packagedElement xmi:type="uml:Package" xmi:id="_s5dH8i9xEe6-k_O8MOAy3Q" name="annotation">
+              <packagedElement xmi:type="uml:Interface" xmi:id="_tP0ZgC9xEe6-k_O8MOAy3Q" name="CrossOrigin"/>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_tQERIC9xEe6-k_O8MOAy3Q" name="DeleteMapping"/>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_tQK-0S9xEe6-k_O8MOAy3Q" name="GetMapping"/>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_tQPQQS9xEe6-k_O8MOAy3Q" name="PathVariable"/>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_tQS6oS9xEe6-k_O8MOAy3Q" name="PostMapping"/>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_tQWlAS9xEe6-k_O8MOAy3Q" name="PutMapping"/>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_tQbdgS9xEe6-k_O8MOAy3Q" name="RequestBody"/>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_tQfH4S9xEe6-k_O8MOAy3Q" name="RestController"/>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_tRChgS9xEe6-k_O8MOAy3Q" name="ControllerAdvice"/>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_tRGL4S9xEe6-k_O8MOAy3Q" name="ExceptionHandler"/>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_tRJ2QS9xEe6-k_O8MOAy3Q" name="ResponseBody"/>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_tRNgoS9xEe6-k_O8MOAy3Q" name="ResponseStatus"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_s7B1QC9xEe6-k_O8MOAy3Q" name="http">
+          <packagedElement xmi:type="uml:Enumeration" xmi:id="_tRRLAS9xEe6-k_O8MOAy3Q" name="HttpStatus"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_s7nEEC9xEe6-k_O8MOAy3Q" name="data">
+          <packagedElement xmi:type="uml:Package" xmi:id="_s7oSMC9xEe6-k_O8MOAy3Q" name="jpa">
+            <packagedElement xmi:type="uml:Package" xmi:id="_s7oSMS9xEe6-k_O8MOAy3Q" name="repository">
+              <packagedElement xmi:type="uml:Interface" xmi:id="_tRl7IC9xEe6-k_O8MOAy3Q" name="JpaRepository"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_s8OvIC9xEe6-k_O8MOAy3Q" name="stereotype">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_tRplgS9xEe6-k_O8MOAy3Q" name="Repository"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_tRtP4S9xEe6-k_O8MOAy3Q" name="Service"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_s89u8C9xEe6-k_O8MOAy3Q" name="boot">
+          <packagedElement xmi:type="uml:Package" xmi:id="_s8-9EC9xEe6-k_O8MOAy3Q" name="autoconfigure">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_tR3A4S9xEe6-k_O8MOAy3Q" name="SpringBootApplication"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_s9AyQy9xEe6-k_O8MOAy3Q" name="test">
+            <packagedElement xmi:type="uml:Package" xmi:id="_s9AyRC9xEe6-k_O8MOAy3Q" name="context">
+              <packagedElement xmi:type="uml:Interface" xmi:id="_tR9ukS9xEe6-k_O8MOAy3Q" name="SpringBootTest"/>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_tRzWgC9xEe6-k_O8MOAy3Q" name="SpringApplication"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_s9AyQC9xEe6-k_O8MOAy3Q" name="junit">
+        <packagedElement xmi:type="uml:Package" xmi:id="_s9AyQS9xEe6-k_O8MOAy3Q" name="jupiter">
+          <packagedElement xmi:type="uml:Package" xmi:id="_s9AyQi9xEe6-k_O8MOAy3Q" name="api">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_tR6rQS9xEe6-k_O8MOAy3Q" name="Test"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_s7K_MC9xEe6-k_O8MOAy3Q" name="jakarta">
+      <packagedElement xmi:type="uml:Package" xmi:id="_s7K_MS9xEe6-k_O8MOAy3Q" name="persistence">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_tRcxMC9xEe6-k_O8MOAy3Q" name="Entity"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_tRhCoS9xEe6-k_O8MOAy3Q" name="Id"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_sosvIC9xEe6-k_O8MOAy3Q">
+      <eAnnotations xmi:id="_soy1wC9xEe6-k_O8MOAy3Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+    <profileApplication xmi:id="_s_TRQC9xEe6-k_O8MOAy3Q">
+      <eAnnotations xmi:id="_s_T4UC9xEe6-k_O8MOAy3Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PERSISTENCY_PROFILES/Persistency.profile.uml#Persistency_2-Annotation-Persistency"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://PERSISTENCY_PROFILES/Persistency.profile.uml#Persistency_2"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_so7YoC9xEe6-k_O8MOAy3Q" base_Package="_shtWUC9xEe6-k_O8MOAy3Q">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_s9uj8C9xEe6-k_O8MOAy3Q" base_Element="_s9X-oC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Annotations xmi:id="_s-SkoC9xEe6-k_O8MOAy3Q" base_Element="_s-A30C9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s-UZ0C9xEe6-k_O8MOAy3Q" name="GetMapping">
+      <annotationParameters xmi:id="_s-YrQC9xEe6-k_O8MOAy3Q" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_tT_H0C9xEe6-k_O8MOAy3Q" value="&quot;/getCourses&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s-gAAC9xEe6-k_O8MOAy3Q" base_Element="_s-cVoC9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s-gnEC9xEe6-k_O8MOAy3Q" name="PathVariable"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s-hOIC9xEe6-k_O8MOAy3Q" base_Element="_s-bukC9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s-hOIS9xEe6-k_O8MOAy3Q" name="GetMapping">
+      <annotationParameters xmi:id="_s-hOIi9xEe6-k_O8MOAy3Q" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_tT_H0S9xEe6-k_O8MOAy3Q" value="&quot;/getCourse/{coursecode}&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s-mtsC9xEe6-k_O8MOAy3Q" base_Element="_s-k4gC9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s-nUwC9xEe6-k_O8MOAy3Q" name="PathVariable"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s-qYEC9xEe6-k_O8MOAy3Q" base_Element="_s-kRcC9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s-qYES9xEe6-k_O8MOAy3Q" name="DeleteMapping">
+      <annotationParameters xmi:id="_s-q_IC9xEe6-k_O8MOAy3Q" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_tT_H0y9xEe6-k_O8MOAy3Q" value="&quot;/deleteCourse/{coursecode}&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s-s0UC9xEe6-k_O8MOAy3Q" base_Element="_s-rmMC9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s-s0US9xEe6-k_O8MOAy3Q" name="GetMapping">
+      <annotationParameters xmi:id="_s-s0Ui9xEe6-k_O8MOAy3Q" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_tT_H1C9xEe6-k_O8MOAy3Q" value="&quot;/getTotalCredits&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s-tbYC9xEe6-k_O8MOAy3Q" base_Element="_s-s0Uy9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s-tbYS9xEe6-k_O8MOAy3Q" name="GetMapping">
+      <annotationParameters xmi:id="_s-uCcC9xEe6-k_O8MOAy3Q" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_tT_H1S9xEe6-k_O8MOAy3Q" value="&quot;/calculateCGPA&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s-v3oC9xEe6-k_O8MOAy3Q" base_Element="_s-upgC9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s-v3oS9xEe6-k_O8MOAy3Q" name="PathVariable"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s-v3oi9xEe6-k_O8MOAy3Q" base_Element="_s-upgS9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s-wesC9xEe6-k_O8MOAy3Q" name="PathVariable"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s-wesS9xEe6-k_O8MOAy3Q" base_Element="_s-uCcS9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s-xFwC9xEe6-k_O8MOAy3Q" name="GetMapping">
+      <annotationParameters xmi:id="_s-xFwS9xEe6-k_O8MOAy3Q" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_tT_H1i9xEe6-k_O8MOAy3Q" value="&quot;/calculateSGPA/{year}/{sem}&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s-ziAC9xEe6-k_O8MOAy3Q" base_Element="_s-xs0S9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s-ziAS9xEe6-k_O8MOAy3Q" name="PathVariable"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s-ziAi9xEe6-k_O8MOAy3Q" base_Element="_s-xs0i9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s-ziAy9xEe6-k_O8MOAy3Q" name="PathVariable"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s-0JEC9xEe6-k_O8MOAy3Q" base_Element="_s-xs0C9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s-0JES9xEe6-k_O8MOAy3Q" name="GetMapping">
+      <annotationParameters xmi:id="_s-0wIC9xEe6-k_O8MOAy3Q" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_tT_H1y9xEe6-k_O8MOAy3Q" value="&quot;/calculateSCredit/{year}/{sem}&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_s-1XMC9xEe6-k_O8MOAy3Q" base_Element="_s9X-oC9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s-1-QC9xEe6-k_O8MOAy3Q" name="RestController"/>
+    <annotations xmi:id="_s-2lUC9xEe6-k_O8MOAy3Q" name="CrossOrigin">
+      <annotationParameters xmi:id="_s-3MYC9xEe6-k_O8MOAy3Q" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_tT95sC9xEe6-k_O8MOAy3Q" value="&quot;http://localhost:3000&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_s_NxsC9xEe6-k_O8MOAy3Q" base_Element="_s_KHUC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Annotations xmi:id="_s_QN8C9xEe6-k_O8MOAy3Q" base_Element="_s_KHUC9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s_QN8S9xEe6-k_O8MOAy3Q" name="ControllerAdvice"/>
+  </UMLLabProfile:Annotations>
+  <Persistency:JPA1StyledElement xmi:id="_s_ZX4C9xEe6-k_O8MOAy3Q" base_Element="_s_RcEC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_s_e3cC9xEe6-k_O8MOAy3Q" base_Element="_s_dpUC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_s_k-EC9xEe6-k_O8MOAy3Q" base_Element="_s_h6wC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Annotations xmi:id="_s_mzQC9xEe6-k_O8MOAy3Q" base_Element="_s_h6wC9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_s_naUC9xEe6-k_O8MOAy3Q" name="Repository"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_s_35AC9xEe6-k_O8MOAy3Q" base_Element="_s_rEsC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:StyledElement xmi:id="_s__00C9xEe6-k_O8MOAy3Q" base_Element="_s_7jYC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Annotations xmi:id="_tABC8C9xEe6-k_O8MOAy3Q" base_Element="_s_rEsC9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_tABC8S9xEe6-k_O8MOAy3Q" name="Service"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_tAF7cC9xEe6-k_O8MOAy3Q" base_Element="_tAEtUC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:StyledElement xmi:id="_tAIXsC9xEe6-k_O8MOAy3Q" base_Element="_tAHwoC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Annotations xmi:id="_tAKM4C9xEe6-k_O8MOAy3Q" base_Element="_tAEtUC9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_tAKM4S9xEe6-k_O8MOAy3Q" name="SpringBootApplication"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_tALbAC9xEe6-k_O8MOAy3Q" base_Element="_tAKz8C9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Annotations xmi:id="_tAMpIC9xEe6-k_O8MOAy3Q" base_Element="_tALbAS9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_tAMpIS9xEe6-k_O8MOAy3Q" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_tAMpIi9xEe6-k_O8MOAy3Q" base_Element="_tAKz8C9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_tANQMC9xEe6-k_O8MOAy3Q" name="SpringBootTest"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_tPissC9xEe6-k_O8MOAy3Q" base_Element="_tPBvUC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tPzycC9xEe6-k_O8MOAy3Q" base_Element="_tPrPkC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tQDqEC9xEe6-k_O8MOAy3Q" base_Element="_tP0ZgC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tQK-0C9xEe6-k_O8MOAy3Q" base_Element="_tQERIC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tQPQQC9xEe6-k_O8MOAy3Q" base_Element="_tQK-0S9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tQS6oC9xEe6-k_O8MOAy3Q" base_Element="_tQPQQS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tQWlAC9xEe6-k_O8MOAy3Q" base_Element="_tQS6oS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tQbdgC9xEe6-k_O8MOAy3Q" base_Element="_tQWlAS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tQfH4C9xEe6-k_O8MOAy3Q" base_Element="_tQbdgS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tQiyQC9xEe6-k_O8MOAy3Q" base_Element="_tQfH4S9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Annotations xmi:id="_tQwNoC9xEe6-k_O8MOAy3Q" base_Element="_tQoR0C9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_tQw0sC9xEe6-k_O8MOAy3Q" name="Autowired"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_tQ0fES9xEe6-k_O8MOAy3Q" base_Element="_tQz4AS9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_tQ0fEi9xEe6-k_O8MOAy3Q" name="RequestBody"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_tQ0fEy9xEe6-k_O8MOAy3Q" base_Element="_tQz4AC9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_tQ1GIC9xEe6-k_O8MOAy3Q" name="PostMapping">
+      <annotationParameters xmi:id="_tQ1tMC9xEe6-k_O8MOAy3Q" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_tT-gwS9xEe6-k_O8MOAy3Q" value="&quot;/addCourse&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_tQ27US9xEe6-k_O8MOAy3Q" base_Element="_tQ2UQi9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_tQ27Ui9xEe6-k_O8MOAy3Q" name="RequestBody"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_tQ27Uy9xEe6-k_O8MOAy3Q" base_Element="_tQ2UQy9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_tQ3iYC9xEe6-k_O8MOAy3Q" name="PathVariable"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_tQ3iYS9xEe6-k_O8MOAy3Q" base_Element="_tQ2UQS9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_tQ3iYi9xEe6-k_O8MOAy3Q" name="PutMapping">
+      <annotationParameters xmi:id="_tQ3iYy9xEe6-k_O8MOAy3Q" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_tT_H0i9xEe6-k_O8MOAy3Q" value="&quot;/updateCourse/{coursecode}&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_tQ-3IC9xEe6-k_O8MOAy3Q" base_Element="_tQ5XkC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tRChgC9xEe6-k_O8MOAy3Q" base_Element="_tQ-3IS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tRGL4C9xEe6-k_O8MOAy3Q" base_Element="_tRChgS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tRJ2QC9xEe6-k_O8MOAy3Q" base_Element="_tRGL4S9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tRNgoC9xEe6-k_O8MOAy3Q" base_Element="_tRJ2QS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tRRLAC9xEe6-k_O8MOAy3Q" base_Element="_tRNgoS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tRU1YC9xEe6-k_O8MOAy3Q" base_Element="_tRRLAS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Generics xmi:id="_tRZG0C9xEe6-k_O8MOAy3Q" genericsValue="String, String" base_Element="_tRU1YS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Annotations xmi:id="_tRbjEC9xEe6-k_O8MOAy3Q" base_Element="_tRU1YS9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_tRcKIC9xEe6-k_O8MOAy3Q" name="ResponseBody"/>
+    <annotations xmi:id="_tRcKIS9xEe6-k_O8MOAy3Q" name="ExceptionHandler">
+      <annotationParameters xmi:id="_tRcKIi9xEe6-k_O8MOAy3Q" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_tT_H2C9xEe6-k_O8MOAy3Q" value="CourseNotFoundException.class"/>
+      </annotationParameters>
+    </annotations>
+    <annotations xmi:id="_tRcKIy9xEe6-k_O8MOAy3Q" name="ResponseStatus">
+      <annotationParameters xmi:id="_tRcKJC9xEe6-k_O8MOAy3Q" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_tT_H2S9xEe6-k_O8MOAy3Q" value="HttpStatus.NOT_FOUND"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_tRhCoC9xEe6-k_O8MOAy3Q" base_Element="_tRcxMC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tRktAC9xEe6-k_O8MOAy3Q" base_Element="_tRhCoS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tRplgC9xEe6-k_O8MOAy3Q" base_Element="_tRl7IC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tRtP4C9xEe6-k_O8MOAy3Q" base_Element="_tRplgS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tRw6QC9xEe6-k_O8MOAy3Q" base_Element="_tRtP4S9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tR3A4C9xEe6-k_O8MOAy3Q" base_Element="_tRzWgC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tR6rQC9xEe6-k_O8MOAy3Q" base_Element="_tR3A4S9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tR9ukC9xEe6-k_O8MOAy3Q" base_Element="_tR6rQS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tSBY8C9xEe6-k_O8MOAy3Q" base_Element="_tR9ukS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Generics xmi:id="_tSKi4C9xEe6-k_O8MOAy3Q" genericsValue="Course" base_Element="_tSGRcS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Annotations xmi:id="_tSLJ8C9xEe6-k_O8MOAy3Q" base_Element="_tSGRcS9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_tSLJ8S9xEe6-k_O8MOAy3Q" name="RequestBody"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_tSLJ8i9xEe6-k_O8MOAy3Q" base_Element="_tSGRcC9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_tSLJ8y9xEe6-k_O8MOAy3Q" name="PostMapping">
+      <annotationParameters xmi:id="_tSLJ9C9xEe6-k_O8MOAy3Q" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_tT-gwC9xEe6-k_O8MOAy3Q" value="&quot;/addCourses&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_tSQCcC9xEe6-k_O8MOAy3Q" base_Element="_tSM_IC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Generics xmi:id="_tSViAC9xEe6-k_O8MOAy3Q" genericsValue="Course, String" base_Element="_tSR3oC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:StyledElement xmi:id="_tSWwIC9xEe6-k_O8MOAy3Q" base_Element="_tSWJEC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Generics xmi:id="_tSaagC9xEe6-k_O8MOAy3Q" genericsValue="Course" base_Element="_tSWJES9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:StyledElement xmi:id="_tSc2wC9xEe6-k_O8MOAy3Q" base_Element="_tSbBkC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Generics xmi:id="_tSghIC9xEe6-k_O8MOAy3Q" genericsValue="Course" base_Element="_tSbBkS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:StyledElement xmi:id="_tShINS9xEe6-k_O8MOAy3Q" base_Element="_tShIMC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Generics xmi:id="_tSkykC9xEe6-k_O8MOAy3Q" genericsValue="Course" base_Element="_tShIMS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:StyledElement xmi:id="_tSlZoC9xEe6-k_O8MOAy3Q" base_Element="_tSkykS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Generics xmi:id="_tSqSIC9xEe6-k_O8MOAy3Q" genericsValue="Course" base_Element="_tSkyki9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Annotations xmi:id="_tTAQYC9xEe6-k_O8MOAy3Q" base_Element="_tS-bMC9xEe6-k_O8MOAy3Q">
+    <annotations xmi:id="_tTA3cC9xEe6-k_O8MOAy3Q" name="Autowired"/>
+  </UMLLabProfile:Annotations>
+  <Persistency:PrimaryKey xmi:id="_tTBegC9xEe6-k_O8MOAy3Q" base_Property="_tTA3cS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:StyledElement xmi:id="_tTCsoS9xEe6-k_O8MOAy3Q" base_Element="_tTCsoC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:StyledElement xmi:id="_tTCsoy9xEe6-k_O8MOAy3Q" base_Element="_tTCsoi9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:StyledElement xmi:id="_tTDTsC9xEe6-k_O8MOAy3Q" base_Element="_tTCspC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:StyledElement xmi:id="_tTD6wC9xEe6-k_O8MOAy3Q" base_Element="_tTDTsS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:StyledElement xmi:id="_tTEh0C9xEe6-k_O8MOAy3Q" base_Element="_tTD6wS9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tUihcC9xEe6-k_O8MOAy3Q" base_Element="_tUYJYC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Reference xmi:id="_tUnZ8C9xEe6-k_O8MOAy3Q" base_Element="_tUjIgC9xEe6-k_O8MOAy3Q"/>
+  <UMLLabProfile:Patch xmi:id="_PebX4C9yEe6-k_O8MOAy3Q" base_Element="_s_RcEC9xEe6-k_O8MOAy3Q" patchText="@@ -20,72 +20,8 @@&#xA; del;&#xA;-%0Aimport javax.persistence.Id;%0D%0Aimport javax.persistence.Entity;%0D&#xA; %0A%0Aim&#xA;" conflicting="false"/>
+</xmi:XMI>
