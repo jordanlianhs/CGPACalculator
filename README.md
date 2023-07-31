@@ -12,8 +12,8 @@ npm install </br>
 npm start </br>
 
 ## Model
-Below is the UML Class Diagram of the structure of my courss
-
+Below is the UML Class Diagram of the structure of my Course Model along with the controllers, services and repository
+![Model Image](https://github.com/jordanlianhs/CGPACalculator/blob/main/images/model.png)
 
 ## How to use
 
