@@ -35,17 +35,29 @@ export default function AddCourseViaJson() {
   };
 
   return (
-    <div className="mt-5 d-flex justify-content-center">
-      <h3 className="">Add Course Via JSON</h3>
-      <textarea
-        className="form-control"
-        placeholder="Enter JSON"
-        name="json"
-        onChange={(e) => onInputChange(e)}
-      />
-      <button className="btn btn-primary" onClick={(e) => onSubmit(e)}>
-        Add Courses
-      </button>
+    <div className="container mt-5">
+      <div className="row justify-content-center">
+        <div className="col-md-12">
+          <h3>Add Course Via JSON</h3>
+        </div>
+      </div>
+      <div className="row justify-content-center">
+        <div className="col-md-6">
+          <textarea
+            className="form-control"
+            placeholder="Enter JSON"
+            name="json"
+            onChange={(e) => onInputChange(e)}
+          />
+        </div>
+      </div>
+      <div className="row justify-content-center mt-3">
+        <div className="col-md-6">
+          <button className="btn btn-primary btn-block" onClick={(e) => onSubmit(e)}>
+            Add Courses
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
