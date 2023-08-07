@@ -129,7 +129,7 @@ export default function AddCourse() {
             <button className="btn btn-outline-dark" type="submit">
               Submit
             </button>
-            <Link className="btn btn-danger btn-outline-dark" to="/">
+            <Link className="btn btn-danger btn-outline-dark" to="/CGPACalculator">
               Cancel
             </Link>
           </div>

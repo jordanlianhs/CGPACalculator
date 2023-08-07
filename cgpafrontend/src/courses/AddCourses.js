@@ -151,7 +151,7 @@ export default function AddCourses() {
               >
                 Add Another Course
               </button>
-              <Link className="btn btn-danger btn-outline-dark" to="/">
+              <Link className="btn btn-danger btn-outline-dark" to="/CGPACalculator">
                 Cancel
               </Link>
             </div>

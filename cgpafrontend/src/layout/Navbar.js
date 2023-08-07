@@ -10,18 +10,18 @@ export default function Navbar() {
             CGPA Calculator
           </Link>
           <div>
-            <Link className="btn btn-outline-light me-3" to="converter">
+            <Link className="btn btn-outline-light me-3" to="/CGPACalculator/converter">
               Convert HTML of Courses to JSON
             </Link>
           </div>
           <div className="d-flex">
-            <Link className="btn btn-outline-light me-3" to="addcourseviajson">
+            <Link className="btn btn-outline-light me-3" to="/CGPACalculator/addcourseviajson">
               Add Course Via JSON
             </Link>
-            <Link className="btn btn-outline-light me-3" to="addcourses">
+            <Link className="btn btn-outline-light me-3" to="/CGPACalculator/addcourses">
               Add Courses
             </Link>
-            <Link className="btn btn-outline-light" to="addcourse">
+            <Link className="btn btn-outline-light" to="/CGPACalculator/addcourse">
               Add Course
             </Link>
           </div>

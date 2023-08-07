@@ -65,7 +65,7 @@ export default function ViewCourse() {
                 </ul>
             </div>
         </div>
-        <Link className= "btn btn-outline-dark" to="/">
+        <Link className= "btn btn-outline-dark" to="/CGPACalculator">
             Back to Home
         </Link>
       </div>

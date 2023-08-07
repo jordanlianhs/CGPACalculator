@@ -154,7 +154,7 @@ export default function EditCourse() {
             <button className="btn btn-danger btn-outline-dark" type="submit">
               Submit
             </button>
-            <Link className="btn btn-outline-dark" to="/">
+            <Link className="btn btn-outline-dark" to="/CGPACalculator">
               Cancel
             </Link>
           </div>

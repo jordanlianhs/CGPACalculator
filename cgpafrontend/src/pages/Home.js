@@ -173,19 +173,19 @@ export default function Home() {
                     <td className="d-flex justify-content-between">
                       <Link
                         className="btn btn-dark mx-auto"
-                        to={`/viewcourse/${course.coursecode}`}
+                        to={`/CGPACalculator/viewcourse/${course.coursecode}`}
                       >
                         View
                       </Link>
                       <Link
                         className="btn btn-outline-dark mx-auto"
-                        to={`/editcourse/${course.coursecode}`}
+                        to={`/CGPACalculator/editcourse/${course.coursecode}`}
                       >
                         Edit
                       </Link>
                       <Link
                         className="btn btn-danger btn-outline-dark mx-auto"
-                        to={`/deletecourse/${course.coursecode}`}
+                        to={`/CGPACalculator/deletecourse/${course.coursecode}`}
                       >
                         Delete
                       </Link>
