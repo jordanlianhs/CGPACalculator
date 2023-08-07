@@ -25,7 +25,7 @@ export default function AddCourse() {
     e.preventDefault();
     console.log(course);
     await axios.post("https://34.143.202.68/addCourse", course);
-    navigate("/");
+    navigate("/CGPACalculator");
   }
 
   return (

@@ -39,7 +39,7 @@ export default function EditCourse() {
     e.preventDefault();
     console.log(course);
     await axios.put(`https://34.143.202.68/updateCourse/${courseid}`, course);
-    navigate("/");
+    navigate("/CGPACalculator");
   }
 
   

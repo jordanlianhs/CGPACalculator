@@ -31,7 +31,7 @@ export default function DeleteCourse() {
 
   const onSubmit = async (e) => {
     await axios.delete(`https://34.143.202.68/deleteCourse/${courseid}`);
-    navigate("/");
+    navigate("/CGPACalculator");
   };
 
   return (
