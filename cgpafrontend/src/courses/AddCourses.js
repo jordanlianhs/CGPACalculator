@@ -25,7 +25,7 @@ export default function AddCourses() {
     setCourses([...courses, course]);
     e.preventDefault();
     console.log(courses);
-    await axios.post("http://34.143.202.68:8080/addCourses", courses);
+    await axios.post("https://34.143.202.68:8080/addCourses", courses);
     navigate("/");
   };
 

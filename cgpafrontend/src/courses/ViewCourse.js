@@ -19,7 +19,7 @@ export default function ViewCourse() {
         const loadCourse = async()=>{
             console.log(courseid);
             if(courseid){
-                const result = await axios.get(`http://34.143.202.68:8080/getCourse/${courseid}`);
+                const result = await axios.get(`https://34.143.202.68:8080/getCourse/${courseid}`);
                 setCourse(result.data);
                 console.log(result.data);
             }

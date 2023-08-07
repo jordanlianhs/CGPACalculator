@@ -26,7 +26,7 @@ export default function EditCourse() {
   useEffect(() => {
     const loadCourse = async()=>{
         if(courseid){
-            const result = await axios.get(`http://34.143.202.68:8080/getCourse/${courseid}`);
+            const result = await axios.get(`https://34.143.202.68:8080/getCourse/${courseid}`);
             setCourse(result.data);
             console.log(result.data);
         }
@@ -38,7 +38,7 @@ export default function EditCourse() {
   const onSubmit = async (e) =>{
     e.preventDefault();
     console.log(course);
-    await axios.put(`http://34.143.202.68:8080/updateCourse/${courseid}`, course);
+    await axios.put(`https://34.143.202.68:8080/updateCourse/${courseid}`, course);
     navigate("/");
   }
 
