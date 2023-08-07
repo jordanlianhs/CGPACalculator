@@ -19,7 +19,7 @@ export default function DeleteCourse() {
     const loadCourse = async () => {
         if (courseid) {
           const result = await axios.get(
-            `https://34.143.202.68:8080/getCourse/${courseid}`
+            `https://34.143.202.68/getCourse/${courseid}`
           );
           setCourse(result.data);
           console.log(result.data);
@@ -30,7 +30,7 @@ export default function DeleteCourse() {
   }, [courseid]);
 
   const onSubmit = async (e) => {
-    await axios.delete(`https://34.143.202.68:8080/deleteCourse/${courseid}`);
+    await axios.delete(`https://34.143.202.68/deleteCourse/${courseid}`);
     navigate("/");
   };
 
