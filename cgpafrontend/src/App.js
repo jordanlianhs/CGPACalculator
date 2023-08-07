@@ -18,13 +18,13 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/CGPACalculator' element={<Home />} />
-          <Route path='/converter' element={<Converter />} />
-          <Route path='/addcourse' element={<AddCourse />} />
-          <Route path='/addcourses' element={<AddCourses />} />
-          <Route path='/addcourseviajson' element={<AddCourseViaJson />} />
-          <Route path ='/viewcourse/:courseid' element={<ViewCourse />} />
-          <Route path='/editcourse/:courseid' element={<EditCourse />} />
-          <Route path='/deletecourse/:courseid' element={<DeleteCourse />} />
+          <Route path='/CGPACalculator/converter' element={<Converter />} />
+          <Route path='/CGPACalculator/addcourse' element={<AddCourse />} />
+          <Route path='/CGPACalculator/addcourses' element={<AddCourses />} />
+          <Route path='/CGPACalculator/addcourseviajson' element={<AddCourseViaJson />} />
+          <Route path ='/CGPACalculator/viewcourse/:courseid' element={<ViewCourse />} />
+          <Route path='/CGPACalculator/editcourse/:courseid' element={<EditCourse />} />
+          <Route path='/CGPACalculator/deletecourse/:courseid' element={<DeleteCourse />} />
         </Routes>
       </Router>
     </div>
