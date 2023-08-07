@@ -17,7 +17,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/CGPACalculator' element={<Home />} />
           <Route path='/converter' element={<Converter />} />
           <Route path='/addcourse' element={<AddCourse />} />
           <Route path='/addcourses' element={<AddCourses />} />
