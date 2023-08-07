@@ -24,7 +24,7 @@ export default function AddCourse() {
   const onSubmit = async (e) =>{
     e.preventDefault();
     console.log(course);
-    await axios.post("http://localhost:8080/addCourse", course);
+    await axios.post("http://34.143.202.68:8080/addCourse", course);
     navigate("/");
   }
 

@@ -26,7 +26,7 @@ export default function AddCourseViaJson() {
     e.preventDefault();
     console.log(courses);
     try {
-      await axios.post("http://localhost:8080/addCourses", courses);
+      await axios.post("http://34.143.202.68:8080/addCourses", courses);
       // Assuming the server successfully adds the courses, navigate to the home page
       navigate("/");
     } catch (error) {

@@ -64,11 +64,11 @@ export default function Home() {
         // Fetch SGPA for the specific year and semester
         try {
           const sgpaData = await axios.get(
-            `http://localhost:8080/calculateSGPA/${year}/${sem}`
+            `http://34.143.202.68:8080/calculateSGPA/${year}/${sem}`
           );
           coursesGroup.sgpa = sgpaData.data;
           const sCredit = await axios.get(
-            `http://localhost:8080/calculateSCredit/${year}/${sem}`
+            `http://34.143.202.68:8080/calculateSCredit/${year}/${sem}`
           );
           coursesGroup.semCredits = sCredit.data;
         } catch (error) {
@@ -86,16 +86,16 @@ export default function Home() {
   }, [courses]); // Call this useEffect hook whenever 'courses' state changes
 
   const loadCourses = async () => {
-    const result = await axios.get("http://localhost:8080/getCourses");
+    const result = await axios.get("http://34.143.202.68:8080/getCourses");
     setCourses(result.data);
     console.log(result.data);
   };
   const loadCgpa = async () => {
-    const result = await axios.get("http://localhost:8080/calculateCGPA");
+    const result = await axios.get("http://34.143.202.68:8080/calculateCGPA");
     setCgpa(result.data);
   };
   const loadTotalCredits = async () => {
-    const result = await axios.get("http://localhost:8080/getTotalCredits");
+    const result = await axios.get("http://34.143.202.68:8080/getTotalCredits");
     setTotalCredits(result.data);
   };
 
