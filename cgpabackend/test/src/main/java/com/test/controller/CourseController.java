@@ -18,7 +18,7 @@ import com.test.repository.CourseRepository;
 import com.test.service.CourseService;
 
 @RestController
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin("https://jordanlianhs.github.io")
 public class CourseController{
 
     private final CourseService courseService;
