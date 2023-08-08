@@ -1,7 +1,7 @@
 # CGPACalculator 
 Calculates CGPA and SGPA for **NTU** Students for any University with a CAP of 5.0..... sorry SMU
 
-I hosted the frontend on Github Pages and the Backend on Google Cloud! 
+I hosted the frontend on Github Pages and the Backend on Google Cloud! <br/>
 Website:
 https://jordanlianhs.github.io/CGPACalculator/
 
