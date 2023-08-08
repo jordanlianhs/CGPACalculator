@@ -1,32 +1,12 @@
 # CGPACalculator 
 Calculates CGPA and SGPA for **NTU** Students for any University with a CAP of 5.0..... sorry SMU
 
-## Software requirements
-Java version: 20.0.1
-Apache Maven 3.9.2
-node v20.2.0
-npm 9.6.6
-
-I will be looking to host this on a platform for the frontend and backend :), its a WIP but what I intend is to use githubpages for the frontend and maybe heroku and firebase for the backend~
-If you have any suggestions do feel free to lmk
-
-## Backend: springboot commands within cgpabackend 
-In application.properties, CGPACalculator/cgpabackend/test/src/main/resources/application.properties, make sure to configure the datasource to your database. </br>
-cd cgpabackend/test
-mvn clean install -DskipTests </br>
-mvn spring-boot:run
-
-## Frontend: npm commands within cgpafrontend
-npx create-react-app cgpafrontend </br>
-npm install </br>
-npm start </br>
-
 ## Model
 Below is the UML Class Diagram of the structure of my Course Model along with the controllers, services and repository
 ![Model Image](https://github.com/jordanlianhs/CGPACalculator/blob/main/images/model.png)
 
 ## How to use
-After loading into the the application hosted on localhost:3000, you will be greeted with an empty course page with no courses. 
+After loading into the the application hosted on https://jordanlianhs.github.io/CGPACalculator/, you will be greeted with an empty course page with no courses. 
 ![No Course Image](https://github.com/jordanlianhs/CGPACalculator/blob/main/images/Img0.png)
 
 Next you can key in your total credits to graduate, as for me, I have 135 credits! Once keyed in, react saves it in the local storage so once you refresh, the value will persist.
