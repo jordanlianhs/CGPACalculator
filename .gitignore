@@ -166,3 +166,10 @@ bin/
 build/
 /bin1/
 java/build/**
+
+.env
+# Application properties
+cgpabackend/test/src/main/resources/application.properties
+
+.metadata
+.vscode
