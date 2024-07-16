@@ -170,8 +170,6 @@ java/build/**
 .env
 # Application properties
 cgpabackend/test/src/main/resources/application.properties
-cgpabackend/src/main/resources/application.properties
-application.properties
 
 .metadata
 .vscode
